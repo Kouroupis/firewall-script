@@ -12,6 +12,11 @@ This is a simple firewall bash script that rejects packets coming from specific 
 ## Implementation
 This tool is using the `iptables/ip6tables` commands to configure firewall rules based on domain names and IP addresses provided by `config.txt`. The command-line tool `dig` is used to resolve the IPv4 and IPv6 addresses of specified domains. Firewall rules can be saved/loaded from rulesV4 and rulesV6 files.
 
+## Question
+>After configuring the firewall rules, test your script by visiting your favorite websites without any other adblocking mechanism (e.g., adblock browser extensions). Can you see ads? Do they load? Some ads persist, why?
+
+Ad count was significantly lower after configuring the firewall rules, especially on sketchy websites. Also, the domains listed on the config file didn't load, when visited. Some ads did persist because config list doesn't include all ad-serving domains. What's more, ads could be embedded within website content.
+
 ## Tool Specification
 
 The tool accepts the following command-line arguements:
